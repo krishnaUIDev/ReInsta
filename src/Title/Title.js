@@ -3,7 +3,7 @@ import Typography from '@material-ui/core/Typography'
 import styled from 'styled-components'
 
 const STypography = styled(Typography)`
- display: grid;
+     display: grid;
  padding: 10px;
  justify-content: center;
 `

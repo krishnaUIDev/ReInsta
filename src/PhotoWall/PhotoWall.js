@@ -9,7 +9,7 @@ const SGridArea = styled(GridArea)`
 const PhotoWall = props => {
   const { posts } = props
   return (
-    <SGridArea templateColumns={'1fr 1fr 1fr'}>
+    <SGridArea templateColumns={'1fr 1fr 1fr 1fr'} gridGap={'15px'}>
       {posts.map((post, index) => (
         <Photo key={index} post={post} removePhoto={props.removePhoto} />
       ))}
