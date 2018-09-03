@@ -5,7 +5,7 @@ import GridArea from '../Shared/GridArea'
 
 const SGridArea = styled(GridArea)`
  justify-items: center;
- padding-top: 60px;
+ padding: 60px;
  background-color: #fafafa;
 `
 const PhotoWall = props => {

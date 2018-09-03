@@ -24,15 +24,11 @@ const styles = theme => ({
     paddingTop: '56.25%' // 16:9
   },
   avatar: {
-    backgroundColor: red[500]
+    backgroundImage: 'radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%)'
   }
 })
 
 class CardFrame extends React.Component {
-  handleDelete () {
-    window.alert('test')
-  }
-
   render () {
     const { classes, post } = this.props
     return (
