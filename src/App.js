@@ -52,6 +52,13 @@ class App extends Component {
   }
   render () {
     const { posts } = this.state
+    // const FirstTitle = [posts[1].title]
+
+    const FirstTitle = posts.filter(item => {
+      return item.title
+    })
+
+    console.log(FirstTitle)
     return (
       <div>
         <Title title={'ReInsta'} />

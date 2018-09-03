@@ -16,7 +16,7 @@ const Header = styled.h1`
 const Title = props => {
   const { title } = props
   return (
-    <SAppBar position='static' color='white'>
+    <SAppBar position='static' color='white' style={{ boxShadow: 'none' }}>
       <GridArea
         templateColumns={'1fr 1fr 1fr'}
         style={{ alignItems: 'center' }}
