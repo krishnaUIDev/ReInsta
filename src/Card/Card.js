@@ -14,6 +14,8 @@ import ShareIcon from '@material-ui/icons/Share'
 import MoreVertIcon from '@material-ui/icons/MoreVert'
 import DeleteIcon from '@material-ui/icons/Delete'
 import GridArea from '../Shared/GridArea'
+import Snackbar from '@material-ui/core/Snackbar'
+import CloseIcon from '@material-ui/icons/Close'
 
 const styles = theme => ({
   card: {
@@ -36,6 +38,18 @@ const SAvatar = styled(Avatar)`
   }
 `
 class CardFrame extends React.Component {
+  state = {
+    open: false
+  }
+
+  handleClick = () => {
+    this.setState({ open: true })
+  }
+
+  handleClose = () => {
+    this.setState({ open: !this.state.open })
+    this.props.removePhoto(this.props.post)
+  }
   render () {
     const { classes, post } = this.props
     return (
@@ -71,14 +85,28 @@ class CardFrame extends React.Component {
           <IconButton>
             <ShareIcon />
           </IconButton>
-          <IconButton
-            onClick={() => {
-              this.props.removePhoto(post)
-            }}
-          >
+          <IconButton onClick={this.handleClick}>
             <DeleteIcon />
           </IconButton>
         </GridArea>
+        <Snackbar
+          anchorOrigin={{
+            vertical: 'bottom',
+            horizontal: 'right'
+          }}
+          open={this.state.open}
+          autoHideDuration={6000}
+          onClose={this.handleClose}
+          ContentProps={{
+            'aria-describedby': 'message-id'
+          }}
+          message={<span id='message-id'>Are you sure? {post.title} </span>}
+          action={[
+            <IconButton key='close' color='inherit' onClick={this.handleClose}>
+              <DeleteIcon />
+            </IconButton>
+          ]}
+        />
       </Card>
     )
   }
