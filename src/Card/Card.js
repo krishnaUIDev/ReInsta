@@ -14,7 +14,6 @@ import ShareIcon from '@material-ui/icons/Share'
 import MoreVertIcon from '@material-ui/icons/MoreVert'
 import DeleteIcon from '@material-ui/icons/Delete'
 import GridArea from '../Shared/GridArea'
-import { Grid } from '@material-ui/core'
 
 const styles = theme => ({
   card: {

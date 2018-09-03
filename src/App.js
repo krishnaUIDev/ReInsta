@@ -54,6 +54,7 @@ class App extends Component {
     const { posts } = this.state
     return (
       <div>
+
         <Title title={'ReInsta'} />
         <Photowall posts={posts} removePhoto={this.removePhoto} />
       </div>
