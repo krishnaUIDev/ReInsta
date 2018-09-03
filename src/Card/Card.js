@@ -30,6 +30,10 @@ const styles = theme => ({
 })
 
 class CardFrame extends React.Component {
+  handleDelete () {
+    window.alert('test')
+  }
+
   render () {
     const { classes, post } = this.props
     return (
@@ -65,7 +69,11 @@ class CardFrame extends React.Component {
           <IconButton>
             <ShareIcon />
           </IconButton>
-          <IconButton>
+          <IconButton
+            onClick={() => {
+              this.props.removePhoto(post)
+            }}
+          >
             <DeleteIcon />
           </IconButton>
         </GridArea>

@@ -10,7 +10,9 @@ const PhotoWall = props => {
   const { posts } = props
   return (
     <SGridArea templateColumns={'1fr 1fr 1fr'}>
-      {posts.map((post, index) => <Photo key={index} post={post} />)}
+      {posts.map((post, index) => (
+        <Photo key={index} post={post} removePhoto={props.removePhoto} />
+      ))}
     </SGridArea>
   )
 }

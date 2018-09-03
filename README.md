@@ -5,3 +5,6 @@
 5. JSX
 6. statefull component creation
 7. stateless component cration
+8. state management
+9. Proptypes
+10.
