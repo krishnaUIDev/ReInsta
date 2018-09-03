@@ -1,13 +1,19 @@
 import React, { Component } from 'react'
-import './Title.css'
+import Typography from '@material-ui/core/Typography'
+import styled from 'styled-components'
 
-export default class Title extends Component {
-  render () {
-    const { title } = this.props
-    return (
-      <div>
-        {title}
-      </div>
-    )
-  }
+const STypography = styled(Typography)`
+ display: grid;
+ padding: 10px;
+ justify-content: center;
+`
+
+const Title = props => {
+  const { title } = props
+  return (
+    <STypography variant='display4'>
+      {title}
+    </STypography>
+  )
 }
+export default Title

@@ -12,6 +12,9 @@ import red from '@material-ui/core/colors/red'
 import FavoriteIcon from '@material-ui/icons/Favorite'
 import ShareIcon from '@material-ui/icons/Share'
 import MoreVertIcon from '@material-ui/icons/MoreVert'
+import DeleteIcon from '@material-ui/icons/Delete'
+import GridArea from '../Shared/GridArea'
+import { Grid } from '@material-ui/core'
 
 const styles = theme => ({
   card: {
@@ -55,14 +58,17 @@ class CardFrame extends React.Component {
             {post.description}
           </Typography>
         </CardContent>
-        <div>
+        <GridArea templateColumns={'1fr 1fr 1fr'} style={{ padding: 10 }}>
           <IconButton>
             <FavoriteIcon />
           </IconButton>
           <IconButton>
             <ShareIcon />
           </IconButton>
-        </div>
+          <IconButton>
+            <DeleteIcon />
+          </IconButton>
+        </GridArea>
       </Card>
     )
   }
