@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import Title from './Title'
 import Photowall from './PhotoWall'
+import { consolidateStreamedStyles } from 'styled-components'
 
 class App extends Component {
   constructor () {
@@ -52,6 +53,11 @@ class App extends Component {
   }
   render () {
     const { posts } = this.state
+    // const FirstTitle = [posts[1].title]
+    let FirstTitle = posts.filter(function (item) {
+      return item.title
+    })
+
     return (
       <div>
         <Title title={'ReInsta'} />
