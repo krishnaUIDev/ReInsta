@@ -34,6 +34,9 @@ const SFontAwesomeIcon = styled(FontAwesomeIcon)`
 export default class PhotoWall extends Component {
   render () {
     const { posts } = this.props
+    var FilterTitle = posts.map(data => {
+      return data.title
+    })
     return (
       <div>
         <ToggleButton>
