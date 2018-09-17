@@ -12,6 +12,11 @@
 - [state management](#state management)
 - [Proptypes](#Proptypes)
 
+## Features
+- React V16.4 (https://reactjs.org/)
+- Material UI (https://material-ui.com/)
+- Redux (https://redux.js.org/)
+- StyledComponents (https://www.styled-components.com/)
 
 ## Installation
 
