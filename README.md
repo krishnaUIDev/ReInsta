@@ -12,6 +12,15 @@
 - [state management](#state management)
 - [Proptypes](#Proptypes)
 
+
+## Installation
+
+- Clone a repo using `git clone https://github.com/krishnaUIDev/ReInsta.git`
+- Navigate to client folder `cd client`
+- Install node modules using `npm install` or `yarn install`
+- Start a client app `cd client && npm run start`
+
+
 ## Contributors
 
 |                                                            | Name           | GitHub                                             |
